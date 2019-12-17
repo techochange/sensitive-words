@@ -40,6 +40,10 @@ namespace BMT.Server.Services.AppService
             {
                 foreach (var item in list)
                 {
+                    if (string.IsNullOrEmpty(item.Trim()))
+                    {
+                        continue;
+                    }
                     if (content.Contains(item))
                     {
                         result = true;
